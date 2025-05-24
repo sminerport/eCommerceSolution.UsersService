@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsMicroService.API", "..\eCommerceSolution.ProductsService\ProductsMicroService.API\ProductsMicroService.API.csproj", "{11352345-A20D-EEFD-A037-6B29AD5F7F25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.API", "eCommerce.API\eCommerce.API.csproj", "{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "..\eCommerceSolution.ProductsService\BusinessLogicLayer\BusinessLogicLayer.csproj", "{C1E12C7D-1C9B-A8F7-C551-56EF9D85C799}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Core", "eCommerce.Core\eCommerce.Core.csproj", "{C839D588-01AA-F7EA-C73D-77D4DF9F1280}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\eCommerceSolution.ProductsService\DataAccessLayer\DataAccessLayer.csproj", "{362A0721-7217-C634-5797-4DCC27047B9A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersUnitTests", "UsersUnitTests\UsersUnitTests.csproj", "{509F21A9-864B-4B02-A0A9-C1A83F94DB43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerce.Infrastructure", "eCommerce.Infrastructure\eCommerce.Infrastructure.csproj", "{5FADC3C0-1F67-920F-5C71-8D15AD76BB65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{11352345-A20D-EEFD-A037-6B29AD5F7F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{11352345-A20D-EEFD-A037-6B29AD5F7F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{11352345-A20D-EEFD-A037-6B29AD5F7F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{11352345-A20D-EEFD-A037-6B29AD5F7F25}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C1E12C7D-1C9B-A8F7-C551-56EF9D85C799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C1E12C7D-1C9B-A8F7-C551-56EF9D85C799}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C1E12C7D-1C9B-A8F7-C551-56EF9D85C799}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C1E12C7D-1C9B-A8F7-C551-56EF9D85C799}.Release|Any CPU.Build.0 = Release|Any CPU
-		{362A0721-7217-C634-5797-4DCC27047B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{362A0721-7217-C634-5797-4DCC27047B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{362A0721-7217-C634-5797-4DCC27047B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{362A0721-7217-C634-5797-4DCC27047B9A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57E33FB-CDB3-6F39-453C-B2F68A5DC768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C839D588-01AA-F7EA-C73D-77D4DF9F1280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C839D588-01AA-F7EA-C73D-77D4DF9F1280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C839D588-01AA-F7EA-C73D-77D4DF9F1280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C839D588-01AA-F7EA-C73D-77D4DF9F1280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FADC3C0-1F67-920F-5C71-8D15AD76BB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FADC3C0-1F67-920F-5C71-8D15AD76BB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FADC3C0-1F67-920F-5C71-8D15AD76BB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FADC3C0-1F67-920F-5C71-8D15AD76BB65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
