@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsMicroService.API", "..\eCommerceSolution.ProductsService\ProductsMicroService.API\ProductsMicroService.API.csproj", "{11352345-A20D-EEFD-A037-6B29AD5F7F25}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "..\eCommerceSolution.ProductsService\BusinessLogicLayer\BusinessLogicLayer.csproj", "{C1E12C7D-1C9B-A8F7-C551-56EF9D85C799}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\eCommerceSolution.ProductsService\DataAccessLayer\DataAccessLayer.csproj", "{362A0721-7217-C634-5797-4DCC27047B9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersUnitTests", "UsersUnitTests\UsersUnitTests.csproj", "{509F21A9-864B-4B02-A0A9-C1A83F94DB43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{362A0721-7217-C634-5797-4DCC27047B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{362A0721-7217-C634-5797-4DCC27047B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{362A0721-7217-C634-5797-4DCC27047B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509F21A9-864B-4B02-A0A9-C1A83F94DB43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

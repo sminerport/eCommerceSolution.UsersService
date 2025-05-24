@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  namespace: uat
+  labels:
+    app: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: microecommerceregistry.azurecr.io/ecommerce-postgres:latest
+          env:
+            - name: ConnectionStrings__PostgresConnection
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: connectionString
+          ports:
+            - containerPort: 5432

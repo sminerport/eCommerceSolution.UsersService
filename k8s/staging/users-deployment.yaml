@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-microservice-deployment
+  namespace: staging
+  labels:
+    app: users-microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: users-microservice
+  template:
+    metadata:
+      labels:
+        app: users-microservice
+    spec:
+      containers:
+        - name: users-microservice
+          image: microecommerceregistry.azurecr.io/users-microservice:__TAG__
+          ports:
+            - containerPort: 9090
+
+          envFrom:
+            - configMapRef:
+                name: staging-config
+
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Staging
+
+            - name: ConnectionStrings__PostgresConnection
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: connectionString
