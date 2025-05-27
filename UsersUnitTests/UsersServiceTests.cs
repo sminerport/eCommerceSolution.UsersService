@@ -31,7 +31,7 @@ public class UsersServiceTests
         var mapper = CreateMapper();
         var service = CreateService(repo, mapper);
 
-        var result = await service.Login(new LoginRequest { Email = "fake@example.com", Password = "bad" });
+        var result = await service.Login(new LoginRequest("fake@example.com", "bad"));
 
         Assert.Null(result);
     }
@@ -50,7 +50,7 @@ public class UsersServiceTests
         var mapper = CreateMapper();
         var service = CreateService(repo, mapper);
 
-        var result = await service.Login(new LoginRequest { Email = "valid@example.com", Password = "good" });
+        var result = await service.Login(new LoginRequest("valid@example.com", "good"));
 
         Assert.NotNull(result);
         Assert.True(result!.Success);
@@ -65,13 +65,11 @@ public class UsersServiceTests
         var mapper = CreateMapper();
         var service = CreateService(repo, mapper);
 
-        var request = new RegisterRequest
-        {
-            PersonName = "Alice",
-            Email = "alice@example.com",
-            Password = "password",
-            Gender = GenderOptions.Female
-        };
+        var request = new RegisterRequest(
+            "alice@example.com",
+            "password",
+            "Alice",
+            GenderOptions.Female);
 
         var result = await service.Register(request);
 
