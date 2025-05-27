@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 using eCommerce.Core.Mappers;
 using FluentValidation.AspNetCore;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add Infrastructure services to the container.
 builder.Services.AddInfrastructure();
@@ -39,7 +39,7 @@ builder.Services.AddCors(options =>
 });
 
 // Build the web application
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 app.UseExceptionHandlingMiddleware();
 
