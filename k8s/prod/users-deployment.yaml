@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: users-microservice
-          image: microecommerceregistry.azurecr.io/users-microservice:__TAG__
+          image: scottazurecontainerregistry.azurecr.io/users-microservice:__TAG__
           ports:
             - containerPort: 9090
 
