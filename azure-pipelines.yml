@@ -115,7 +115,7 @@ stages:
                 - checkout: self
 
                 - task: AzureCLI@2
-                  displayName: Create/update mysql & rabbitmq k8s Secrets
+                  displayName: Create/update postgres & rabbitmq k8s Secrets
                   inputs:
                     azureSubscription: $(resource-group-service-connection) # must be an AzureRM SP connection
                     scriptType: bash
@@ -127,9 +127,12 @@ stages:
                         --name $(aksClusterName) \
                         --overwrite-existing
 
-                      # 2) Create-or-update the mysql-credentials Secret
+                      # 2) Create-or-update the postgres-credentials Secret
                       kubectl -n $(kubernetes-namespace) create secret generic postgres-credentials \
                         --from-literal=connectionString="$(DefaultConnection)" \
+                        --from-literal=POSTGRES_USER="$(PostgresUser)" \
+                        --from-literal=POSTGRES_PASSWORD="$(PostgresPassword)" \
+                        --from-literal=POSTGRES_DB="$(PostgresDb)" \
                         --dry-run=client -o yaml \
                       | kubectl -n $(kubernetes-namespace) apply -f -
 

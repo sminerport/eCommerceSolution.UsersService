@@ -18,11 +18,28 @@ spec:
       containers:
         - name: postgres
           image: scottazurecontainerregistry.azurecr.io/ecommerce-postgres:latest
+          envFrom:
+            - configMapRef:
+                name: dev-configmap
+            - secretRef:
+                name: postgres-credentials
+
           env:
-            - name: ConnectionStrings__PostgresConnection
+            - name: POSTGRES_USER
               valueFrom:
                 secretKeyRef:
                   name: postgres-credentials
-                  key: connectionString
+                  key: POSTGRES_USER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: POSTGRES_PASSWORD
+            - name: POSTGRES_DB
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: POSTGRES_DB
+
           ports:
             - containerPort: 5432
