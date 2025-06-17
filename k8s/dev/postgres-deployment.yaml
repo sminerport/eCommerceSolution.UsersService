@@ -20,7 +20,7 @@ spec:
           image: scottazurecontainerregistry.azurecr.io/ecommerce-postgres:latest
           envFrom:
             - configMapRef:
-                name: dev-configmap
+                name: dev-config
             - secretRef:
                 name: postgres-credentials
 
