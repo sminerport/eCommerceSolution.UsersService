@@ -29,6 +29,9 @@ spec:
             - name: ASPNETCORE_ENVIRONMENT
               value: Staging
 
+            - name: ASPNETCORE_URLS
+              value: http://+:9090
+
             - name: ConnectionStrings__PostgresConnection
               valueFrom:
                 secretKeyRef:
